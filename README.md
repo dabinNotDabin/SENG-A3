@@ -10,9 +10,13 @@ SENG-301 IS SHITTY
   I think the easiest would be to divide it into three sets of tests where we can each work on our own. We can just put the test methods wherever they seem to fit for now based on complexity and similarities and then sort that part out once we've dealt with them all.
   
   There are 21 scripts and since I did the first one, what if;
-  I do      T01, T04, T07, T10, T13, U03, U06
-  Shining   T02, T05, T08, T11, U01, U04, U07
-  Christian T03, T06, T09, T12, U02, U05, U08
+  
+I do      T01, T04, T07, T10, T13, U03, U06
+
+Shining   T02, T05, T08, T11, U01, U04, U07
+
+Christian T03, T06, T09, T12, U02, U05, U08
+
   
   Let me know what you guys think..
   
