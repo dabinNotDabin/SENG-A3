@@ -108,8 +108,8 @@ namespace UnitTestProject1
             //Compare Actual Delivery to Exepected Delivery
             foreach (var item in expected)
             {
-                Assert.IsTrue(delivered.Contains(item));
-                delivered.Remove(item);
+                Assert.IsTrue(checker.contains(delivered, item));
+                checker.remove(delivered, item);
             }
 
             Assert.IsTrue(delivered.Count == 0);
