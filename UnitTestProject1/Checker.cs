@@ -9,7 +9,7 @@ using Frontend2.Hardware;
 namespace UnitTestProject1
 {
     public class Checker
-    { 
+    {
         public Checker() { }
 
 
@@ -93,7 +93,7 @@ namespace UnitTestProject1
                     break;
                 }
             }
-            
+
             return contains;
         }
 
@@ -142,6 +142,68 @@ namespace UnitTestProject1
 
             return searchIn;
         }
-        
-}
+
+
+
+        public bool contains(List<IDeliverable> searchIn, IDeliverable searchFor)
+        {
+            Boolean contained = false;
+
+            foreach (var item in searchIn)
+            {
+                if (item is Coin && searchFor is Coin)
+                {
+                    if (((Coin)item).Value == ((Coin)searchFor).Value)
+                    {
+                        contained = true;
+                        break;
+                    }
+                }
+                else if (item is PopCan && searchFor is PopCan)
+                {
+                    if (((PopCan)item).Name == ((PopCan)searchFor).Name)
+                    {
+                        contained = true;
+                        break;
+                    }
+                }
+            }
+
+            return contained;
+        }
+
+
+
+
+
+        public List<IDeliverable> remove(List<IDeliverable> removeFrom, IDeliverable removeThis)
+        {
+            foreach (var item in removeFrom)
+            {
+                if (item is Coin && removeThis is Coin)
+                {
+                    if (((Coin)item).Value == ((Coin)removeThis).Value)
+                    {
+                        removeFrom.Remove(item);
+                        break;
+                    }
+                }
+                else if (item is PopCan && removeThis is PopCan)
+                {
+                    if (((PopCan)item).Name == ((PopCan)removeThis).Name)
+                    {
+                        removeFrom.Remove(item);
+                        break;
+                    }
+                }
+            }
+
+
+
+
+            return removeFrom;
+        }
+
+
+    }
 }
